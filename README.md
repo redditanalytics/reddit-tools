@@ -5,8 +5,8 @@ Collection of tools to process data from Reddit
 This is a Perl script that enables processing comment JSON objects.  You can find sample data for this 
 script at the following locations:
 
-Small file:  https://drive.google.com/file/d/0BxTexXJx0k4KNGFBUGRUUnlOX0E/view?usp=sharing 
-Larger file: https://drive.google.com/file/d/0BxTexXJx0k4KcEwzeXpSQmxEOVU/view?usp=sharing 
+Small file (130M):  https://drive.google.com/uc?export=download&id=0BxTexXJx0k4KNGFBUGRUUnlOX0E 
+Larger file (1.2G): https://drive.google.com/uc?export=download&id=0BxTexXJx0k4KcEwzeXpSQmxEOVU 
 
 ### How to use processComments.pl
 The script itself is an example of how to use multiple workers to take advantage of multiple cores on 
