@@ -22,4 +22,25 @@ processComments.pl 4 < data_file  (This would create four workers)
 processComments.pl < data_file (This would create a worker for every available core.  This is the 
 fastest method)
 
+### How fast is it?
 
+Using a modern i7-4770 CPU and reading from an SSD drive, it will process decode and process 500,000 
+JSON objects per second.  The script is generally I/O bound on most systems when invoked to use as 
+many workers as there are cores.  
+
+### Can I use it to process other things like Reddit posts?
+
+Yes!  You will need to look at the section of code that is in the subroutine "process_json."  You can 
+modify the JSON keys that you are interested in based on what data you are feeding the script.
+
+### I'm getting errors when I run this.  What's going on?
+
+If you get an error when trying to invoke this script, you are probably lacking some dependencies.  If 
+you are using Ubuntu, make sure to install build-essential:
+```
+apt-get install build-essential
+```
+You can install all the Perl modules at once using:
+```
+cpan Cpanel::JSON::XS Fcntl Term::ANSIColor Time::HiRes Sys::Info
+``` 
